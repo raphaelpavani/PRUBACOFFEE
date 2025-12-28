@@ -38,6 +38,24 @@ Esta landing page foi desenvolvida para:
 - **Fonte:** Segoe UI (corporativa e legível)
 - **Pesos:** 400, 500, 600, 700
 
+## Pagamentos
+
+- Cartão de crédito: assinatura mensal automática
+- Pix: alternativa manual
+
+Pagamentos processados pelo Mercado Pago.
+
+## Executar localmente
+
+cd client
+npm install
+npm run dev
+
+## Build de produção
+
+npm run build
+npm run preview
+
 ---
 
 ## 🗂️ Estrutura de Arquivos
@@ -66,3 +84,4 @@ gremio-cafe/
 │   ├── index.html              # HTML principal
 │   └── package.json            # Dependências
 ├── README.md
+
