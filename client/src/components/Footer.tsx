@@ -24,7 +24,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm font-semibold">Responsáveis:</p>
-                  <p className="text-primary-foreground/80 text-sm">(preencher com nomes)</p>
+                  <p className="text-primary-foreground/80 text-sm">(Raphael, Godinho, Carvalho)</p>
                 </div>
               </div>
             </div>
@@ -45,6 +45,9 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/70">
           <p>© {currentYear} Grêmio do Café. Todos os direitos reservados.</p>
+           <p className="mt-1 text-xs text-primary-foreground/70">
+      O Grêmio do Café é uma iniciativa interna de rateio entre colaboradores, destinada exclusivamente ao custeio de itens de uso comum, não representando atividade comercial, prestação de serviços ou venda de produtos.
+    </p>
           <div className="flex gap-6">
             <a href="#como-funciona" className="hover:text-primary-foreground transition-colors">
               Como funciona
