@@ -84,4 +84,6 @@ gremio-cafe/
 │   ├── index.html              # HTML principal
 │   └── package.json            # Dependências
 ├── README.md
-
+```
+## 📌 Observação
+Este projeto é uma iniciativa interna de rateio e não representa atividade comercial.
