@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grêmio do Café - Assinatura Mensal</title>
+    <meta name="description" content="Assinatura mensal para manter o café do setor sempre abastecido. Sem cobrança chata e sem esquecimento.">
+    <meta name="theme-color" content="#5C4033">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFFFFF;
+            color: #2C2C2C;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 2rem;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: white;
+            border-bottom: 1px solid #E8DCC8;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 1024px) {
+            .header-content {
+                height: 5rem;
+                padding: 0 2rem;
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #5C4033;
+        }
+
+        @media (min-width: 768px) {
+            .logo-text {
+                font-size: 1.25rem;
+            }
+        }
+
+        nav {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            nav {
+                display: flex;
+            }
+        }
+
+        nav a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #2C2C2C;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #5C4033;
+        }
+
+        .cta-button {
+            background-color: #5C4033;
+            color: #F5E6D3;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: rgba(92, 64, 51, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (min-width: 768px) {
+            .cta-button {
+                padding: 0.625rem 2rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom right, white, white, rgba(232, 220, 200, 0.2));
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding: 6rem 1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero {
+                padding: 8rem 1rem;
+            }
+        }
+
+        .hero-content {
+            max-width: 42rem;
+        }
+
+        .hero h1 {
+            color: #5C4033;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: rgba(44, 44, 44, 0.8);
+            margin-bottom: 2rem;
+            max-width: 28rem;
+        }
+
+        .price-box {
+            display: inline-block;
+            background-color: rgba(232, 220, 200, 0.5);
+            border: 1px solid rgba(139, 111, 71, 0.3);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .price-box-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B5D4F;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-box-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #5C4033;
+        }
+
+        @media (min-width: 768px) {
+            .price-box-value {
+                font-size: 2.25rem;
+            }
+        }
+
+        .price-box-period {
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.6);
+            margin-top: 0.5rem;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+
+        .secondary-button {
+            border: 2px solid #5C4033;
+            color: #5C4033;
+            background-color: transparent;
+            padding: 0.625rem 2rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .secondary-button:hover {
+            background-color: rgba(92, 64, 51, 0.05);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 1rem;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding: 6rem 1rem;
+            }
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: #5C4033;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: rgba(44, 44, 44, 0.7);
+            max-width: 42rem;
+        }
+
+        /* How It Works */
+        #como-funciona {
+            background-color: white;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .card {
+            background-color: #F9F7F4;
+            border: 1px solid #E8DCC8;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: rgba(232, 220, 200, 0.5);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .card:hover .card-icon {
+            background-color: #8B6F47;
+            color: white;
+        }
+
+        .card h3 {
+            color: #5C4033;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: rgba(44, 44, 44, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .card-step {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #E8DCC8;
+        }
+
+        .card-step span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6B5D4F;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Included */
+        #incluso {
+            background-color: rgba(232, 220, 200, 0.2);
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .items-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .item-icon {
+            width: 4rem;
+            height: 4rem;
+            background-color: #5C4033;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-icon svg {
+            width: 2rem;
+            height: 2rem;
+            color: #F5E6D3;
+        }
+
+        .item h3 {
+            color: #5C4033;
+            font-size: 1.25rem;
+        }
+
+        .info-box {
+            background-color: white;
+            border: 1px solid #E8DCC8;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .info-box-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #8B6F47;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .info-box h3 {
+            color: #5C4033;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .info-box p {
+            color: rgba(44, 44, 44, 0.7);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing */
+        #valor {
+            background-color: white;
+        }
+
+        .pricing-card {
+            background: linear-gradient(to bottom right, rgba(232, 220, 200, 0.3), rgba(232, 220, 200, 0.1));
+            border: 1px solid rgba(139, 111, 71, 0.2);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            max-width: 42rem;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-card {
+                padding: 3rem;
+            }
+        }
+
+        .pricing-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B5D4F;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-value {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-amount {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #5C4033;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-amount {
+                font-size: 3.75rem;
+            }
+        }
+
+        .pricing-period {
+            font-size: 1.125rem;
+            color: rgba(44, 44, 44, 0.6);
+        }
+
+        .pricing-person {
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.6);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-divider {
+            border-top: 1px solid rgba(139, 111, 71, 0.2);
+            margin: 2rem 0;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: rgba(44, 44, 44, 0.8);
+        }
+
+        .benefits-list svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #8B6F47;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .full-width-button {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .pricing-footer {
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.6);
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        /* Rules */
+        #regras {
+            background-color: rgba(232, 220, 200, 0.2);
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .rules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .rules-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .rule-card {
+            background-color: white;
+            border: 1px solid #E8DCC8;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .rule-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .rule-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: rgba(232, 220, 200, 0.5);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .rule-icon svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #5C4033;
+        }
+
+        .rule-card h3 {
+            color: #5C4033;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .rule-card p {
+            color: rgba(44, 44, 44, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .trust-statement {
+            background-color: white;
+            border-left: 4px solid #8B6F47;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .trust-statement h3 {
+            color: #5C4033;
+            margin-bottom: 0.75rem;
+        }
+
+        .trust-statement p {
+            color: rgba(44, 44, 44, 0.7);
+        }
+
+        /* FAQ */
+        #duvidas {
+            background-color: white;
+        }
+
+        .accordion {
+            max-width: 48rem;
+            margin-bottom: 3rem;
+        }
+
+        .accordion-item {
+            background-color: #F9F7F4;
+            border: 1px solid #E8DCC8;
+            border-radius: 0.5rem;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+
+        .accordion-trigger {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-weight: 600;
+            color: #5C4033;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .accordion-trigger:hover {
+            color: rgba(92, 64, 51, 0.8);
+        }
+
+        .accordion-item.open .accordion-trigger {
+            background-color: rgba(232, 220, 200, 0.1);
+        }
+
+        .accordion-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            transition: transform 0.2s;
+        }
+
+        .accordion-item.open .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.open .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-text {
+            padding: 0 1.5rem 1rem 1.5rem;
+            color: rgba(44, 44, 44, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .help-box {
+            background-color: rgba(232, 220, 200, 0.2);
+            border: 1px solid rgba(139, 111, 71, 0.2);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .help-box h3 {
+            color: #5C4033;
+            margin-bottom: 0.5rem;
+        }
+
+        .help-box p {
+            color: rgba(44, 44, 44, 0.7);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(to right, rgba(92, 64, 51, 0.05), rgba(139, 111, 71, 0.05));
+            border-top: 1px solid #E8DCC8;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .final-cta {
+                padding: 6rem 1rem;
+            }
+        }
+
+        .final-cta-icon {
+            width: 3rem;
+            height: 3rem;
+            color: #8B6F47;
+            margin: 0 auto 1.5rem;
+        }
+
+        .final-cta h2 {
+            color: #5C4033;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            color: rgba(44, 44, 44, 0.7);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-button {
+            padding: 0.75rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        .final-cta-trust {
+            font-size: 0.875rem;
+            color: rgba(44, 44, 44, 0.6);
+            margin-top: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5C4033;
+            color: #F5E6D3;
+            padding: 3rem 1rem;
+        }
+
+        @media (min-width: 768px) {
+            footer {
+                padding: 4rem 1rem;
+            }
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(245, 230, 211, 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        footer h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+        }
+
+        footer p {
+            font-size: 0.875rem;
+            color: rgba(245, 230, 211, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-contact {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .footer-contact svg {
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: rgba(245, 230, 211, 0.7);
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(245, 230, 211, 0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #F5E6D3;
+        }
+
+        /* Utilities */
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-0.5rem); }
+        }
+
+        /* SVG Icons */
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="2.5">
+                    <path d="M9 3v12a4 4 0 0 0 4 4h0a4 4 0 0 0 4-4V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6"></path>
+                </svg>
+                <span class="logo-text">Grêmio do Café</span>
+            </div>
+
+            <nav>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#incluso">O que inclui</a>
+                <a href="#valor">Valor</a>
+                <a href="#regras">Regras</a>
+                <a href="#duvidas">Dúvidas</a>
+            </nav>
+
+            <button class="cta-button" onclick="handleCTA()">Assinar agora</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Grêmio do Café ☕</h1>
+                <p class="hero-subtitle">Assinatura mensal para manter o café do setor sempre abastecido — sem cobrança chata e sem esquecimento.</p>
+                
+                <div class="price-box">
+                    <div class="price-box-label">Valor</div>
+                    <div class="price-box-value">R$ 20,00</div>
+                    <div class="price-box-period">por pessoa / mês</div>
+                </div>
+
+                <div class="button-group">
+                    <button class="cta-button" onclick="handleCTA()">Assinar agora</button>
+                    <a href="#como-funciona" class="secondary-button">Como funciona</a>
+                </div>
+
+                <div class="flex items-center gap-2 animate-bounce" style="color: #6B5D4F; font-size: 0.875rem;">
+                    <span>Saiba mais</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como funciona</h2>
+                <p>Três passos simples para manter seu café sempre abastecido.</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <path d="M1 10h22"></path>
+                        </svg>
+                    </div>
+                    <h3>Assinou, pronto</h3>
+                    <p>Pagamento recorrente no cartão de crédito. Simples e automático.</p>
+                    <div class="card-step"><span>Passo 1</span></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+                        </svg>
+                    </div>
+                    <h3>Arrecadação automática</h3>
+                    <p>Sem precisar cobrar colegas. O sistema cuida de tudo para você.</p>
+                    <div class="card-step"><span>Passo 2</span></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Reposição garantida</h3>
+                    <p>Compra e reposição dos itens do grêmio conforme o saldo disponível.</p>
+                    <div class="card-step"><span>Passo 3</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section id="incluso">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que está incluso</h2>
+                <p>Os itens são adquiridos conforme o saldo mensal do grêmio.</p>
+            </div>
+
+            <div class="items-grid">
+                <div class="item">
+                    <div class="item-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 3v12a4 4 0 0 0 4 4h0a4 4 0 0 0 4-4V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6"></path>
+                        </svg>
+                    </div>
+                    <h3>Café</h3>
+                </div>
+
+                <div class="item">
+                    <div class="item-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Açúcar</h3>
+                </div>
+
+                <div class="item">
+                    <div class="item-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 7h16M4 7c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2m0 0v10c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V7m0 0l1-3h14l1 3"></path>
+                        </svg>
+                    </div>
+                    <h3>Filtro de papel</h3>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <div>
+                    <h3>Gestão inteligente do saldo</h3>
+                    <p>Os itens são comprados de forma estratégica para aproveitar ao máximo o saldo mensal. Se houver sobra, o valor é automaticamente transferido para o mês seguinte, garantindo que nada seja desperdiçado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="valor">
+        <div class="container">
+            <div class="section-header">
+                <h2>Valor</h2>
+                <p>Simples, transparente e sem surpresas.</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-label">Assinatura mensal</div>
+                <div class="pricing-value">
+                    <span class="pricing-amount">R$ 20,00</span>
+                    <span class="pricing-period">/mês</span>
+                </div>
+                <div class="pricing-person">por pessoa</div>
+
+                <div class="pricing-divider"></div>
+
+                <ul class="benefits-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Cobrança automática no cartão de crédito
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Sem taxa de adesão
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Cancelamento a qualquer momento
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Transparência total com relatórios mensais
+                    </li>
+                </ul>
+
+                <button class="cta-button full-width-button" onclick="handleCTA()">Assinar agora</button>
+                <div class="pricing-footer">Sem compromisso. Cancele quando quiser.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules -->
+    <section id="regras">
+        <div class="container">
+            <div class="section-header">
+                <h2>Regras e transparência</h2>
+                <p>Conheça os princípios que guiam o Grêmio do Café.</p>
+            </div>
+
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Participação opcional</h3>
+                    <p>Ninguém é obrigado a participar. A adesão é totalmente voluntária.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Consumo destinado a participantes</h3>
+                    <p>O café, açúcar e filtro são para uso exclusivo dos membros do grêmio.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Uso exclusivo do valor</h3>
+                    <p>Cada real arrecadado é destinado apenas para café, açúcar e filtro de papel.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Prestação de contas periódica</h3>
+                    <p>Relatório mensal detalhado com todos os gastos e saldo disponível.</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 17"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Sobra de saldo</h3>
+                    <p>Qualquer saldo restante é automaticamente transferido para o mês seguinte.</p>
+                </div>
+            </div>
+
+            <div class="trust-statement">
+                <h3>Compromisso com a transparência</h3>
+                <p>O Grêmio do Café funciona com total transparência. Todos os membros têm acesso aos relatórios de gastos e podem acompanhar exatamente como o dinheiro está sendo utilizado. Confiança é a base do nosso modelo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="duvidas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dúvidas frequentes</h2>
+                <p>Respostas para as perguntas mais comuns.</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item" onclick="toggleAccordion(this)">
+                    <button class="accordion-trigger">
+                        <span>Por que assinatura e não Pix?</span>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-text">A assinatura evita esquecimentos e elimina a necessidade de cobranças manuais. Com o pagamento automático, você nunca precisa se preocupar em lembrar de pagar, e o café sempre estará abastecido.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" onclick="toggleAccordion(this)">
+                    <button class="accordion-trigger">
+                        <span>Posso cancelar quando quiser?</span>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Sim, absolutamente. O cancelamento é feito pelo link de assinatura do Mercado Pago. Você pode cancelar a qualquer momento, sem multa ou taxa de cancelamento.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" onclick="toggleAccordion(this)">
+                    <button class="accordion-trigger">
+                        <span>E se meu cartão falhar?</span>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-text">O sistema do Mercado Pago avisa quando há falha no pagamento. Você terá a oportunidade de regularizar o cartão depois. Não há penalidades, apenas uma notificação.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" onclick="toggleAccordion(this)">
+                    <button class="accordion-trigger">
+                        <span>Quem compra os itens?</span>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Os responsáveis definidos pelo grupo fazem as compras e a reposição dos itens. Eles usam o saldo mensal do grêmio para adquirir café, açúcar e filtro de papel conforme necessário.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" onclick="toggleAccordion(this)">
+                    <button class="accordion-trigger">
+                        <span>Como funciona a prestação de contas?</span>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Um relatório mensal é compartilhado com todos os membros, mostrando exatamente quanto foi gasto, com quais itens, e qual é o saldo restante. Total transparência.</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" onclick="toggleAccordion(this)">
+                    <button class="accordion-trigger">
+                        <span>Posso mudar de ideia depois de assinar?</span>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-text">Claro! Se você assinar e depois decidir que não quer mais participar, basta cancelar a assinatura. Não há penalidades ou compromissos de longo prazo.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-box">
+                <h3>Ainda tem dúvidas?</h3>
+                <p>Entre em contato com os responsáveis do grêmio através do email ou presencialmente no setor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <svg class="final-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6v6l4 2"></polyline>
+            </svg>
+            <h2>Leva menos de 1 minuto para participar</h2>
+            <p>Clique no botão abaixo e finalize sua assinatura em poucos cliques. Seu café está te esperando!</p>
+            <button class="cta-button" onclick="handleCTA()" style="padding: 0.75rem 2.5rem; font-size: 1.125rem;">Assinar agora</button>
+            <div class="final-cta-trust">Pagamentos processados de forma segura pelo Mercado Pago</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Grêmio do Café</h3>
+                    <p>Mantendo o café do setor sempre abastecido, sem cobrança chata e sem esquecimento.</p>
+                </div>
+
+                <div>
+                    <h3>Contato</h3>
+                    <div class="footer-contact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22 6 12 13 2 6"></polyline>
+                        </svg>
+                        <div>
+                            <p style="font-weight: 600;">Responsáveis:</p>
+                            <p>(preencher com nomes)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Segurança</h3>
+                    <div class="footer-contact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <p>Este site não coleta dados sensíveis. Pagamentos são processados de forma segura pelo Mercado Pago.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Grêmio do Café. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#como-funciona">Como funciona</a>
+                    <a href="#duvidas">Dúvidas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Handle CTA button clicks
+        function handleCTA() {
+            const mpLink = '{{LINK_MERCADO_PAGO_ASSINATURA}}';
+            if (mpLink && mpLink !== '{{LINK_MERCADO_PAGO_ASSINATURA}}') {
+                window.location.href = mpLink;
+            } else {
+                alert('Link de assinatura não configurado. Por favor, atualize o link do Mercado Pago.');
+            }
+        }
+
+        // Toggle accordion items
+        function toggleAccordion(element) {
+            const isOpen = element.classList.contains('open');
+            
+            // Close all other accordion items
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('open');
+            });
+            
+            // Toggle current item
+            if (!isOpen) {
+                element.classList.add('open');
+            }
+        }
+
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>
