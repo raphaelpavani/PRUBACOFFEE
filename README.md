@@ -38,20 +38,19 @@ Esta landing page foi desenvolvida para:
 - **Fonte:** Segoe UI (corporativa e legível)
 - **Pesos:** 400, 500, 600, 700
 
-## Pagamentos
-
+## 💳 Pagamentos
 - Cartão de crédito: assinatura mensal automática
 - Pix: alternativa manual
 
 Pagamentos processados pelo Mercado Pago.
 
-## Executar localmente
+## ▶️ Executar localmente
 ```bash
 cd client
 npm install
 npm run dev
 ```
-## Build de produção
+## 🏗️ Build de produção
 ```bash
 npm run build
 npm run preview
