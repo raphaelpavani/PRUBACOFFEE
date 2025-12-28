@@ -55,7 +55,7 @@ Esta landing page foi desenvolvida para:
 cd client
 npm install
 npm run dev
-
+```
 ---
 
 ## 🗂️ Estrutura de Arquivos
