@@ -46,16 +46,16 @@ Esta landing page foi desenvolvida para:
 Pagamentos processados pelo Mercado Pago.
 
 ## Executar localmente
-
+```bash
 cd client
 npm install
 npm run dev
-
+```
 ## Build de produção
-
+```bash
 npm run build
 npm run preview
-
+```
 ---
 
 ## 🗂️ Estrutura de Arquivos
