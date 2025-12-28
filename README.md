@@ -6,7 +6,7 @@ Landing page responsiva e moderna para assinatura mensal do **Grêmio do Café**
 
 ## 📄 Sobre o Projeto
 
-O **Grêmio do Café** é uma iniciativa para manter o café do setor sempre abastecido por meio de uma assinatura mensal simples e organizada.
+O **Grêmio do Café** é uma iniciativa interna para manter o café do setor sempre abastecido por meio de uma assinatura mensal simples e organizada.
 
 Esta landing page foi desenvolvida para:
 - Informar claramente como funciona o grêmio
@@ -28,33 +28,34 @@ Esta landing page foi desenvolvida para:
 
 ## 🎨 Design
 
-### Paleta de Cores
+### 🎨 Paleta de Cores
 - **Marrom Café (primária):** `#5C4033`
 - **Creme (secundária):** `#F5E6D3`
 - **Branco Puro:** `#FFFFFF`
 - **Cinza Escuro (texto):** `#2C2C2C`
 
-### Tipografia
+### 🔤 Tipografia
 - **Fonte:** Segoe UI (corporativa e legível)
 - **Pesos:** 400, 500, 600, 700
 
-## 💳 Pagamentos
-- Cartão de crédito: assinatura mensal automática
-- Pix: alternativa manual
+---
 
-Pagamentos processados pelo Mercado Pago.
+## 💳 Pagamentos
+
+- **Cartão de crédito:** assinatura mensal automática (**recomendado**)
+- **Pix:** alternativa manual
+
+> Pagamentos processados diretamente pelo **Mercado Pago**.
+
+---
 
 ## ▶️ Executar localmente
+
 ```bash
 cd client
 npm install
 npm run dev
-```
-## 🏗️ Build de produção
-```bash
-npm run build
-npm run preview
-```
+
 ---
 
 ## 🗂️ Estrutura de Arquivos
